@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DevconnectApplication<devconnect>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.devconnect.devconnect.DevconnectApplication",
+            "projectName": "devconnect",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
