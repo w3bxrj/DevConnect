@@ -1,10 +1,10 @@
-package com.devconnect.devconnect;
+package com.devconnect.DevConnect;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DevconnectApplicationTests {
+class DevConnectApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -1,37 +1,35 @@
-package com.devconnect.devconnect.model;
+package com.devconnect.DevConnect.model;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Developer {
-
     private Long id;
-    private String firstName;
-    private String lastName;
+    private String name;
     private String email;
-    private String phone;
     private String bio;
     private String city;
-    private String LinkedInURL;
-    private String GitHubURL;
     private List<String> skills;
+    private String linkedInURL;
+    private String githubInURL;
     private Double yearsOfExperience;
-    private final LocalDateTime createdAt;
+    private LocalDateTime createdAt;
+
 
     public Developer() {
         createdAt = LocalDateTime.now();
     }
 
-    public Developer(Long id, String firstName, String lastName, String email) {
+    public Developer(Long id, String name, String email) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name = name;
         this.email = email;
-        skills = new ArrayList<>();
+        this.skills = new ArrayList<>();
         createdAt = LocalDateTime.now();
     }
 
+    // ─── Getters and Setters ─────────────────────────────────────
     public Long getId() {
         return id;
     }
@@ -40,36 +38,20 @@ public class Developer {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
+//    public String getEmail() {
+//        return email;
+//    }
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getBio() {
@@ -80,38 +62,15 @@ public class Developer {
         this.bio = bio;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getLinkedInURL() {
-        return LinkedInURL;
-    }
-
-    public void setLinkedInURL(String LinkedInURL) {
-        this.LinkedInURL = LinkedInURL;
-    }
-
-    public String getGitHubURL() {
-        return GitHubURL;
-    }
-
-    public void setGitHubURL(String GitHubURL) {
-        this.GitHubURL = GitHubURL;
-    }
-
     public List<String> getSkills() {
         return skills;
     }
 
+    // Is this method safe?
     public void setSkills(List<String> skills) {
-        if (skills == null)
+        if (skills == null) {
             this.skills = skills;
-
+        }
     }
 
     public void addSkill(String skill) {
@@ -129,6 +88,22 @@ public class Developer {
         }
     }
 
+    public String getLinkedInURL() {
+        return linkedInURL;
+    }
+
+    public void setLinkedInURL(String linkedInURL) {
+        this.linkedInURL = linkedInURL;
+    }
+
+    public String getGithubInURL() {
+        return githubInURL;
+    }
+
+    public void setGithubInURL(String githubInURL) {
+        this.githubInURL = githubInURL;
+    }
+
     public Double getYearsOfExperience() {
         return yearsOfExperience;
     }
@@ -139,5 +114,13 @@ public class Developer {
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }
