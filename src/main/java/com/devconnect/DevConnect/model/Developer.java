@@ -8,8 +8,10 @@ public class Developer {
     private Long id;
     private String name;
     private String email;
+    private String password;
     private String bio;
     private String city;
+    private String phoneNumber;
     private List<String> skills;
     private String linkedInURL;
     private String githubInURL;
@@ -25,6 +27,15 @@ public class Developer {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.skills = new ArrayList<>();
+        createdAt = LocalDateTime.now();
+    }
+
+    public Developer(Long id, String name, String email,String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
         this.skills = new ArrayList<>();
         createdAt = LocalDateTime.now();
     }
@@ -71,6 +82,8 @@ public class Developer {
         if (skills == null) {
             this.skills = skills;
         }
+
+        this.skills.addAll(skills);
     }
 
     public void addSkill(String skill) {
@@ -123,4 +136,25 @@ public class Developer {
     public void setCity(String city) {
         this.city = city;
     }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
 }

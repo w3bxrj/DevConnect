@@ -6,7 +6,6 @@
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.devconnect.DevConnect.DevConnectApplication",
-            "projectName": "DevConnect",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
